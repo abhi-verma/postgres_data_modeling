@@ -6,3 +6,12 @@ The company is expecting a Data Engineer to process these logs and metadata file
 
 ## Data Model
 The data model resembles a star schema with one Fact table, songplays and four dimension table: users, songs, artists and time. A star schema provides the advantages of higher query performance, built-in referential integrity and ease of understanding.
+![image](https://drive.google.com/uc?export=view&id=1BgUXfkibD25e1wbxmAYD4LUzHRwzFht9)
+
+## ETL Pipeline
+There are 5 files in the ETL_Files folder, which are explained in detail below:
+- sql_queries.py: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
+- create_tables.py: This python file imports the contents of the sql_queries.py file. It creates the database, drops the tables, if they exist and then re-creates the tables. This script is a way of resetting the database amd its tables.
+- etl.ipynb: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
+- test.ipynb: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
+- etl.py: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
