@@ -8,6 +8,33 @@ The company is expecting a Data Engineer to process these logs and metadata file
 The data model resembles a star schema with one Fact table, songplays and four dimension table: users, songs, artists and time. A star schema provides the advantages of higher query performance, built-in referential integrity and ease of understanding.
 ![image](https://drive.google.com/uc?export=view&id=1BgUXfkibD25e1wbxmAYD4LUzHRwzFht9)
 
+## Project Structure
+```
+postgres_data_modeling
+│   README.md             # Project description
+│
+└───Data                  # The dataset
+|   |               
+│   └───log_data
+│   |   │  ...
+|   └───song_data
+│       │  ...
+│   
+└───Src                   # Source code
+│   |
+|   └─── create_tables.py # Schema and Tables creation script
+│   |
+|   └─── etl.py           # ETL script
+│   |
+|   └─── sql_queries.py   # SQL DDL Queries
+│   |
+|   └─── etl.ipynb        # ETL helper Jupiter notebook
+│   |
+|   └─── test.ipynb       # Tables Data Test Jupiter Notebook
+```
+
+
+
 ## ETL Pipeline
 There are 5 files in the ETL_Files folder, which are explained in detail below:
 - sql_queries.py: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
@@ -29,4 +56,4 @@ Run the following commands in order:
 ## Example Queries
 1. Which songs were played the most in the year 2018?
 2. Which artist was most popular in the year 2018?
-3. How much time free users spend listening on the app and could be targeted for paid subscription marketing?
+3. How much time free users spend listening on the app and could they be targeted for paid subscription marketing?
