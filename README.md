@@ -12,6 +12,16 @@ The data model resembles a star schema with one Fact table, songplays and four d
 There are 5 files in the ETL_Files folder, which are explained in detail below:
 - sql_queries.py: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
 - create_tables.py: This python file imports the contents of the sql_queries.py file. It creates the database, drops the tables, if they exist and then re-creates the tables. This script is a way of resetting the database amd its tables.
-- etl.ipynb: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
-- test.ipynb: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
-- etl.py: This python file has queries for dropping and creating tables. It creates a python list for all the drop and create queries. The files also contains queries for inserting data into the tables.
+- etl.ipynb: This Jupyter Notebook is used for exploring the data sets and insert a small subset to test the tables and the data types.
+- etl.py: This python file is the core of the project and builds ETL pipelines to process JSON files and store data into created Postgres tables. The file scans the directory for songs and logs and processes each file inside the directory and subdirectories. It then tranforms the processed data to store it in tables in specific formats.
+- test.ipynb: This Jupiter notebook could be used to validate the data inserted into the tables. It connects to the Sparkify database and queries the tables.
+
+## Prerequisites
+- Python 3
+- pandas and psycopg2 libraries
+- Postgres database available on localhost
+
+## Running the Python Scripts
+Run the following commands in order:
+1. python create_tables.py
+2. python etl.py
