@@ -25,3 +25,8 @@ There are 5 files in the ETL_Files folder, which are explained in detail below:
 Run the following commands in order:
 1. python create_tables.py
 2. python etl.py
+
+## Example Queries
+1. Which songs were played the most in the year 2018?
+2. Which artist was most popular in the year 2018?
+3. How much time free users spend listening on the app and could be targeted for paid subscription marketing?
